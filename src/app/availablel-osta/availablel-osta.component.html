@@ -1,0 +1,36 @@
+<section >
+
+ 
+
+    <div class="container" >
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div *ngIf="avialableOsta.length" >
+                    <div class="wrapper fadeInDown" *ngFor="let osta of avialableOsta" >
+                    
+                        <div id="formContent" >
+                            <div class="col-lg-4 col-md-4 col-sm-4" >
+                                <img src="../../assets/images/carpenter 2.png" id="icon" alt="User Icon" height="150" width="200"/>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 handyman-cls" >
+                                    <h4>{{ osta.full_name }} <i class="fa fa-user" ></i></h4>
+                                    <h5>{{ arr[osta.craft -1] }} <i class="fa fa-anchor" ></i></h5>
+                                    <h5>{{ osta.phone_number }} <i class="fa fa-mobile" ></i></h5>
+                                    <button class="btn btn-primary" >احجز</button>
+                            </div>
+                    
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div  *ngIf="!avialableOsta.length">
+                     <h1 style="color: red; text-align: center; margin-top: 200px; "> لا يوجد صنايعى متاح الان</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- End Our login -->
+    

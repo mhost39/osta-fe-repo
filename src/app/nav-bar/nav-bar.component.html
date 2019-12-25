@@ -1,0 +1,31 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ournavbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a class="navbar-brand wobble-horizontal" href="#">Osta <span>afandy.</span></a> -->
+      <a class="navbar-brand wobble-horizontal" href="index.html"><img src="../../assets/images/logo.png" height="80px" width="150px;" alt=""></a>
+
+      <!-- <a class="navbar-brand wobble-horizontal" href="#"><span><img src="images/logo.png" alt=""></span> </a>  -->
+    </div>
+    <div  class="collapse navbar-collapse" id="ournavbar">
+      <ul class="nav navbar-nav navbar-right">
+
+        <li><a routerLink="/contactUs"> اتصل بنا</a></li> 
+
+        <li *ngIf="checkuser()" (click)="logout()" ><a routerLink="/"> تسجيل خروج</a></li>
+        <li *ngIf="checkosta()" ><a routerLink="/ostaProfile"> ملفى الشخصى</a></li>
+
+        <li *ngIf="!checkuser()" ><a routerLink="/login"> تسجيل دخول</a></li>
+        
+        <li><a routerLink="/beosta"> خليك أوسطفندي</a></li>
+        <li class="active"><a href="index.html">أوسطفندي</a></li>
+  
+      </ul>
+    </div>
+  </div> <!-- End Of The Container -->
+</nav>

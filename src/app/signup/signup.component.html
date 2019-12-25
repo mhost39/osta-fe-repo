@@ -1,0 +1,91 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+              <!-- Tabs Titles -->
+          
+              <!-- Icon -->
+              <img src="../../assets/images/logo3.png" id="icon" alt="User Icon" height="200" width="150"/>
+          
+              <!-- <div id="formFooter">
+                  <img src="images/logo3.png" id="icon" alt="User Icon" />
+              </div> -->
+              <!-- Login Form -->
+              <form #f="ngForm" (ngSubmit)= "submit(f)">
+                  <div class="form-group">
+                    <input type="text" class="fadeIn second" 
+                        ngModel name="name" #name="ngModel" required
+                        placeholder="  الإسم بالكامل">
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)" 
+                          class="alert alert-danger">
+                        <div *ngIf="name.errors.required">
+                              يجب ادخال الاسم صحيح
+                        </div>
+                    </div>
+                  </div>
+                  <input type="text" class="fadeIn second" name="aboutServive" 
+                  ngModel #aboutServive="ngModel" placeholder=" اسم المستخدم">
+                  <div class="form-group">
+                    <input type="text" class="fadeIn second" 
+                        ngModel name="phone" placeholder="   رقم الهاتف"
+                        #phone="ngModel"
+                        pattern="(?=.*\d).{11,}"  required>
+                    <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" 
+                        class="alert alert-danger">
+                      <div *ngIf="phone.errors.required">
+                          يجب ادخال رقم تيلفون صحيح
+                      </div>
+                      <div *ngIf="phone.errors.pattern">
+                          رقم التيلفون يجب الا يقل عن 11 رقم
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="fadeIn third" 
+                        ngModel #password="ngModel" name="password" 
+                        placeholder="كلمة المرور" 
+                        required pattern="(?=.*\d).{8,}" >
+                    <div *ngIf="password.invalid && (password.dirty || password.touched)" 
+                        class="alert alert-danger">
+                      <div *ngIf="password.errors.required">
+                        يجب ادخال كلمة المرور 
+                      </div>
+                      <div *ngIf="password.errors.pattern">
+                        كلمة المرور يجب ان لا تقل عن 8 احرف او ارقام
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <input type="password" name="confPass" class="fadeIn second" 
+                      placeholder="أعد كتابة كلمة المرور"
+                      ngModel
+                      #confPass="ngModel" required  required pattern="(?=.*\d).{8,}">
+                  
+                    <div *ngIf="confPass.invalid && (confPass.dirty || confPass.touched)" 
+                        class="alert alert-danger">
+                        <div *ngIf="confPass.errors.pattern">
+                          اعد كتابة كلمة المرور 
+                        </div>
+                      <div *ngIf="confPass.errors.required">
+                        يجب تأكيد كلمة المرور 
+                      </div>
+                      
+                  </div>
+                </div>
+                <select style="color: black;" class="fadeIn second" 
+                    name="city" ngModel #city="ngModel" >
+                  <option style="color: black;" value="Location">المدينة</option>
+                  <option style="color: black;" value="المنصوره">المنصورة</option>
+                  <option style="color: black;" value="الجيزه">الجيزة</option>
+              </select>
+                <input type="submit" class="fadeIn fourth" value="إنشاء مستخدم">
+              </form>
+          
+            </div>
+          </div>
+    </div>
+
+  </div>
+</div>

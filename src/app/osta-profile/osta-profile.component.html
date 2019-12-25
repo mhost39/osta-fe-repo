@@ -1,0 +1,33 @@
+<!-- start Our signup -->
+
+<div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+    
+        <!-- Icon -->
+        <img src="../../assets/images/logo3.png" id="icon" alt="User Icon" height="200" width="150"/>
+    
+        <form #f="ngForm" (ngSubmit)= "submit(f)">
+         
+          <h4> مرحــباً  </h4>
+
+
+  
+          <select style="color: black;" id="login" class="fadeIn second" 
+            name="status" ngModel #status="ngModel">
+              <option style="color: black;" value="-1 ">الحالــة اليوميــــة </option>
+              <option style="color: black;" value="1">متاح </option>
+              <option style="color: black;" value="0">غير متاح </option>  
+          </select>
+  
+          <input type="submit" class="fadeIn fourth available-btn" value="تأكيــد">
+  
+        </form>
+    
+      </div>
+    </div>
+  </div>
+  <!-- end Our signup -->
+  
+    
