@@ -22,7 +22,7 @@
     "@angular/router": "~8.2.14",
     "angularfire2": "^5.2.3",
     "bootstrap": "^4.4.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "firebase": "^7.5.2",
     "path": "^0.12.7",
     "rxjs": "~6.4.0",
